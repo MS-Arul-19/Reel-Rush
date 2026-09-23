@@ -34,6 +34,7 @@ export interface Batch {
 export interface Round {
   id: string;          // e.g. "round-1"
   name: string;        // e.g. "Round 1"
+  type?: 'AUDIO_FIRST' | 'IMAGE_FIRST';
   batches: Batch[];
 }
 

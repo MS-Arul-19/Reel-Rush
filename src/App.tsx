@@ -24,7 +24,10 @@ const GameRouter: React.FC = () => {
     navigateTo,
     toggleFullscreen,
     currentQuestion,
+    currentRound,
   } = useGameState();
+
+  const isImageFirst = currentRound?.type === 'IMAGE_FIRST' || currentRound?.id === 'round-2';
 
   // Global Keyboard Shortcuts Dispatcher
   useEffect(() => {
@@ -66,7 +69,11 @@ const GameRouter: React.FC = () => {
         if (key === 'ENTER') {
           e.preventDefault();
           if (questionPlayState === 'READY') {
-            setQuestionPlayState('AUDIO_PLAYING');
+            if (isImageFirst) {
+              setQuestionPlayState('THINKING');
+            } else {
+              setQuestionPlayState('AUDIO_PLAYING');
+            }
           } else if (questionPlayState === 'AUDIO_COMPLETED' || questionPlayState === 'AUDIO_PLAYING') {
             setQuestionPlayState('THINKING');
           } else if (questionPlayState === 'THINKING') {

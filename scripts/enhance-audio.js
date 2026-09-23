@@ -9,6 +9,8 @@ const manifestPath = path.join(projectRoot, 'public', 'gameData.json');
 const batches = [
   path.join(publicGameDir, 'round-1', 'batch-1'),
   path.join(publicGameDir, 'round-1', 'batch-2'),
+  path.join(publicGameDir, 'round-2', 'batch-1'),
+  path.join(publicGameDir, 'round-2', 'batch-2'),
 ];
 
 console.log('--- Starting Audio Enhancement & Noise Reduction ---');

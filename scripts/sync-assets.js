@@ -2,7 +2,8 @@ import fs from 'fs';
 import path from 'path';
 
 const projectRoot = process.cwd();
-const sourceDir = path.join(projectRoot, 'Round 1');
+const round1SourceDir = path.join(projectRoot, 'Round 1');
+const round2SourceDir = path.join(projectRoot, 'New folder (2)');
 const publicGameDir = path.join(projectRoot, 'public', 'game');
 const manifestPath = path.join(projectRoot, 'public', 'gameData.json');
 
@@ -14,22 +15,6 @@ if (!fs.existsSync(publicGameDir)) {
 const audioExts = ['.mp3', '.mpeg', '.wav', '.m4a', '.ogg'];
 const imageExts = ['.jpg', '.jpeg', '.png', '.webp'];
 
-function getFilesRecursively(dir) {
-  let results = [];
-  if (!fs.existsSync(dir)) return results;
-  const list = fs.readdirSync(dir);
-  list.forEach((file) => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    if (stat && stat.isDirectory()) {
-      results = results.concat(getFilesRecursively(filePath));
-    } else {
-      results.push(filePath);
-    }
-  });
-  return results;
-}
-
 function processAssets() {
   console.log('Starting Asset Sync & Manifest Generation...');
 
@@ -40,43 +25,33 @@ function processAssets() {
       {
         id: "round-1",
         name: "Round 1",
+        type: "AUDIO_FIRST",
         batches: []
       },
       {
         id: "round-2",
         name: "Round 2",
-        batches: [
-          {
-            id: "batch-1",
-            name: "Batch 1",
-            questions: []
-          },
-          {
-            id: "batch-2",
-            name: "Batch 2",
-            questions: []
-          }
-        ]
+        type: "IMAGE_FIRST",
+        batches: []
       }
     ]
   };
 
-  // Find all question folders in Batch 1 and Batch 2
-  const batchDirs = [
+  // --- Process Round 1 ---
+  const round1Batches = [
     {
       id: "batch-1",
       name: "Batch 1",
-      source: path.join(sourceDir, 'New folder', 'batch 1', 'New folder')
+      source: path.join(round1SourceDir, 'New folder', 'batch 1', 'New folder')
     },
     {
       id: "batch-2",
       name: "Batch 2",
-      source: path.join(sourceDir, 'New folder', 'batch 2')
+      source: path.join(round1SourceDir, 'New folder', 'batch 2')
     }
   ];
 
-  // Populate Round 1
-  batchDirs.forEach((batchInfo) => {
+  round1Batches.forEach((batchInfo) => {
     const destBatchDir = path.join(publicGameDir, 'round-1', batchInfo.id);
     if (!fs.existsSync(destBatchDir)) {
       fs.mkdirSync(destBatchDir, { recursive: true });
@@ -127,7 +102,11 @@ function processAssets() {
           fs.copyFileSync(audioSource, destAudioPath);
           fs.copyFileSync(imageSource, destImagePath);
 
-          const publicAudioUrl = `/game/round-1/${batchInfo.id}/${destAudioName}`;
+          // Prefer .mp3 if exists (from enhance script), otherwise destAudioName
+          const mp3File = `${qId}.mp3`;
+          const audioFileName = fs.existsSync(path.join(destBatchDir, mp3File)) ? mp3File : destAudioName;
+
+          const publicAudioUrl = `/game/round-1/${batchInfo.id}/${audioFileName}`;
           const publicImageUrl = `/game/round-1/${batchInfo.id}/${destImageName}`;
 
           questions.push({
@@ -149,20 +128,95 @@ function processAssets() {
     console.log(`Processed ${questions.length} questions for Round 1 - ${batchInfo.name}`);
   });
 
-  // Round 2 is ready with Batch 1 and Batch 2 (empty until user adds Round 2 question files)
-  manifest.rounds[1].batches = [
+  // --- Process Round 2 ---
+  const round2Batches = [
     {
       id: "batch-1",
       name: "Batch 1",
-      questions: []
+      source: path.join(round2SourceDir, 'batch 1')
     },
     {
       id: "batch-2",
       name: "Batch 2",
-      questions: []
+      source: path.join(round2SourceDir, 'batch 2')
     }
   ];
-  console.log('Round 2 initialized with empty batches ready for new questions.');
+
+  round2Batches.forEach((batchInfo) => {
+    const destBatchDir = path.join(publicGameDir, 'round-2', batchInfo.id);
+    if (!fs.existsSync(destBatchDir)) {
+      fs.mkdirSync(destBatchDir, { recursive: true });
+    }
+
+    const questions = [];
+    if (fs.existsSync(batchInfo.source)) {
+      const qFolders = fs.readdirSync(batchInfo.source).filter((f) => {
+        return fs.statSync(path.join(batchInfo.source, f)).isDirectory() && f.toLowerCase().startsWith('no.');
+      });
+
+      qFolders.sort((a, b) => {
+        const numA = parseInt(a.replace(/\D/g, ''), 10) || 0;
+        const numB = parseInt(b.replace(/\D/g, ''), 10) || 0;
+        return numA - numB;
+      });
+
+      qFolders.forEach((folderName) => {
+        const num = parseInt(folderName.replace(/\D/g, ''), 10);
+        const padNum = String(num).padStart(2, '0');
+        const qId = `question-${padNum}`;
+
+        const folderPath = path.join(batchInfo.source, folderName);
+        const files = fs.readdirSync(folderPath);
+
+        let audioSource = null;
+        let imageSource = null;
+
+        files.forEach((file) => {
+          const ext = path.extname(file).toLowerCase();
+          if (audioExts.includes(ext) && !audioSource) {
+            audioSource = path.join(folderPath, file);
+          } else if (imageExts.includes(ext) && !imageSource) {
+            imageSource = path.join(folderPath, file);
+          }
+        });
+
+        if (audioSource && imageSource) {
+          const audioExt = path.extname(audioSource);
+          const imageExt = path.extname(imageSource);
+
+          const destAudioName = `${qId}${audioExt}`;
+          const destImageName = `${qId}${imageExt}`;
+
+          const destAudioPath = path.join(destBatchDir, destAudioName);
+          const destImagePath = path.join(destBatchDir, destImageName);
+
+          fs.copyFileSync(audioSource, destAudioPath);
+          fs.copyFileSync(imageSource, destImagePath);
+
+          const mp3File = `${qId}.mp3`;
+          const audioFileName = fs.existsSync(path.join(destBatchDir, mp3File)) ? mp3File : destAudioName;
+
+          const publicAudioUrl = `/game/round-2/${batchInfo.id}/${audioFileName}`;
+          const publicImageUrl = `/game/round-2/${batchInfo.id}/${destImageName}`;
+
+          questions.push({
+            id: qId,
+            number: num,
+            audio: publicAudioUrl,
+            answerImage: publicImageUrl
+          });
+        }
+      });
+    }
+
+    manifest.rounds[1].batches.push({
+      id: batchInfo.id,
+      name: batchInfo.name,
+      questions: questions
+    });
+
+    console.log(`Processed ${questions.length} questions for Round 2 - ${batchInfo.name}`);
+  });
 
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), 'utf-8');
   console.log(`Manifest saved to ${manifestPath}`);

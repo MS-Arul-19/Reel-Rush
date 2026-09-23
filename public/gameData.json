@@ -5,6 +5,7 @@
     {
       "id": "round-1",
       "name": "Round 1",
+      "type": "AUDIO_FIRST",
       "batches": [
         {
           "id": "batch-1",
@@ -13,91 +14,91 @@
             {
               "id": "question-01",
               "number": 1,
-              "audio": "/game/round-1/batch-1/question-01.mpeg",
+              "audio": "/game/round-1/batch-1/question-01.mp3",
               "answerImage": "/game/round-1/batch-1/question-01.png"
             },
             {
               "id": "question-02",
               "number": 2,
-              "audio": "/game/round-1/batch-1/question-02.mpeg",
+              "audio": "/game/round-1/batch-1/question-02.mp3",
               "answerImage": "/game/round-1/batch-1/question-02.png"
             },
             {
               "id": "question-03",
               "number": 3,
-              "audio": "/game/round-1/batch-1/question-03.mpeg",
+              "audio": "/game/round-1/batch-1/question-03.mp3",
               "answerImage": "/game/round-1/batch-1/question-03.png"
             },
             {
               "id": "question-04",
               "number": 4,
-              "audio": "/game/round-1/batch-1/question-04.mpeg",
+              "audio": "/game/round-1/batch-1/question-04.mp3",
               "answerImage": "/game/round-1/batch-1/question-04.png"
             },
             {
               "id": "question-05",
               "number": 5,
-              "audio": "/game/round-1/batch-1/question-05.mpeg",
+              "audio": "/game/round-1/batch-1/question-05.mp3",
               "answerImage": "/game/round-1/batch-1/question-05.png"
             },
             {
               "id": "question-06",
               "number": 6,
-              "audio": "/game/round-1/batch-1/question-06.mpeg",
+              "audio": "/game/round-1/batch-1/question-06.mp3",
               "answerImage": "/game/round-1/batch-1/question-06.png"
             },
             {
               "id": "question-07",
               "number": 7,
-              "audio": "/game/round-1/batch-1/question-07.mpeg",
+              "audio": "/game/round-1/batch-1/question-07.mp3",
               "answerImage": "/game/round-1/batch-1/question-07.png"
             },
             {
               "id": "question-08",
               "number": 8,
-              "audio": "/game/round-1/batch-1/question-08.mpeg",
+              "audio": "/game/round-1/batch-1/question-08.mp3",
               "answerImage": "/game/round-1/batch-1/question-08.png"
             },
             {
               "id": "question-09",
               "number": 9,
-              "audio": "/game/round-1/batch-1/question-09.mpeg",
+              "audio": "/game/round-1/batch-1/question-09.mp3",
               "answerImage": "/game/round-1/batch-1/question-09.png"
             },
             {
               "id": "question-10",
               "number": 10,
-              "audio": "/game/round-1/batch-1/question-10.mpeg",
+              "audio": "/game/round-1/batch-1/question-10.mp3",
               "answerImage": "/game/round-1/batch-1/question-10.png"
             },
             {
               "id": "question-11",
               "number": 11,
-              "audio": "/game/round-1/batch-1/question-11.mpeg",
+              "audio": "/game/round-1/batch-1/question-11.mp3",
               "answerImage": "/game/round-1/batch-1/question-11.png"
             },
             {
               "id": "question-12",
               "number": 12,
-              "audio": "/game/round-1/batch-1/question-12.mpeg",
+              "audio": "/game/round-1/batch-1/question-12.mp3",
               "answerImage": "/game/round-1/batch-1/question-12.png"
             },
             {
               "id": "question-13",
               "number": 13,
-              "audio": "/game/round-1/batch-1/question-13.mpeg",
+              "audio": "/game/round-1/batch-1/question-13.mp3",
               "answerImage": "/game/round-1/batch-1/question-13.png"
             },
             {
               "id": "question-14",
               "number": 14,
-              "audio": "/game/round-1/batch-1/question-14.mpeg",
+              "audio": "/game/round-1/batch-1/question-14.mp3",
               "answerImage": "/game/round-1/batch-1/question-14.png"
             },
             {
               "id": "question-15",
               "number": 15,
-              "audio": "/game/round-1/batch-1/question-15.mpeg",
+              "audio": "/game/round-1/batch-1/question-15.mp3",
               "answerImage": "/game/round-1/batch-1/question-15.png"
             }
           ]
@@ -109,91 +110,91 @@
             {
               "id": "question-01",
               "number": 1,
-              "audio": "/game/round-1/batch-2/question-01.mpeg",
+              "audio": "/game/round-1/batch-2/question-01.mp3",
               "answerImage": "/game/round-1/batch-2/question-01.png"
             },
             {
               "id": "question-02",
               "number": 2,
-              "audio": "/game/round-1/batch-2/question-02.mpeg",
+              "audio": "/game/round-1/batch-2/question-02.mp3",
               "answerImage": "/game/round-1/batch-2/question-02.png"
             },
             {
               "id": "question-03",
               "number": 3,
-              "audio": "/game/round-1/batch-2/question-03.mpeg",
+              "audio": "/game/round-1/batch-2/question-03.mp3",
               "answerImage": "/game/round-1/batch-2/question-03.jpeg"
             },
             {
               "id": "question-04",
               "number": 4,
-              "audio": "/game/round-1/batch-2/question-04.mpeg",
+              "audio": "/game/round-1/batch-2/question-04.mp3",
               "answerImage": "/game/round-1/batch-2/question-04.jpeg"
             },
             {
               "id": "question-05",
               "number": 5,
-              "audio": "/game/round-1/batch-2/question-05.mpeg",
+              "audio": "/game/round-1/batch-2/question-05.mp3",
               "answerImage": "/game/round-1/batch-2/question-05.jpeg"
             },
             {
               "id": "question-06",
               "number": 6,
-              "audio": "/game/round-1/batch-2/question-06.mpeg",
+              "audio": "/game/round-1/batch-2/question-06.mp3",
               "answerImage": "/game/round-1/batch-2/question-06.jpeg"
             },
             {
               "id": "question-07",
               "number": 7,
-              "audio": "/game/round-1/batch-2/question-07.mpeg",
+              "audio": "/game/round-1/batch-2/question-07.mp3",
               "answerImage": "/game/round-1/batch-2/question-07.png"
             },
             {
               "id": "question-08",
               "number": 8,
-              "audio": "/game/round-1/batch-2/question-08.mpeg",
+              "audio": "/game/round-1/batch-2/question-08.mp3",
               "answerImage": "/game/round-1/batch-2/question-08.png"
             },
             {
               "id": "question-09",
               "number": 9,
-              "audio": "/game/round-1/batch-2/question-09.mpeg",
+              "audio": "/game/round-1/batch-2/question-09.mp3",
               "answerImage": "/game/round-1/batch-2/question-09.png"
             },
             {
               "id": "question-10",
               "number": 10,
-              "audio": "/game/round-1/batch-2/question-10.mpeg",
+              "audio": "/game/round-1/batch-2/question-10.mp3",
               "answerImage": "/game/round-1/batch-2/question-10.png"
             },
             {
               "id": "question-11",
               "number": 11,
-              "audio": "/game/round-1/batch-2/question-11.mpeg",
+              "audio": "/game/round-1/batch-2/question-11.mp3",
               "answerImage": "/game/round-1/batch-2/question-11.png"
             },
             {
               "id": "question-12",
               "number": 12,
-              "audio": "/game/round-1/batch-2/question-12.mpeg",
+              "audio": "/game/round-1/batch-2/question-12.mp3",
               "answerImage": "/game/round-1/batch-2/question-12.png"
             },
             {
               "id": "question-13",
               "number": 13,
-              "audio": "/game/round-1/batch-2/question-13.mpeg",
+              "audio": "/game/round-1/batch-2/question-13.mp3",
               "answerImage": "/game/round-1/batch-2/question-13.jpg"
             },
             {
               "id": "question-14",
               "number": 14,
-              "audio": "/game/round-1/batch-2/question-14.mpeg",
+              "audio": "/game/round-1/batch-2/question-14.mp3",
               "answerImage": "/game/round-1/batch-2/question-14.jpg"
             },
             {
               "id": "question-15",
               "number": 15,
-              "audio": "/game/round-1/batch-2/question-15.mpeg",
+              "audio": "/game/round-1/batch-2/question-15.mp3",
               "answerImage": "/game/round-1/batch-2/question-15.jpg"
             }
           ]
@@ -203,16 +204,199 @@
     {
       "id": "round-2",
       "name": "Round 2",
+      "type": "IMAGE_FIRST",
       "batches": [
         {
           "id": "batch-1",
           "name": "Batch 1",
-          "questions": []
+          "questions": [
+            {
+              "id": "question-01",
+              "number": 1,
+              "audio": "/game/round-2/batch-1/question-01.mp3",
+              "answerImage": "/game/round-2/batch-1/question-01.jpeg"
+            },
+            {
+              "id": "question-02",
+              "number": 2,
+              "audio": "/game/round-2/batch-1/question-02.mp3",
+              "answerImage": "/game/round-2/batch-1/question-02.jpeg"
+            },
+            {
+              "id": "question-03",
+              "number": 3,
+              "audio": "/game/round-2/batch-1/question-03.mp3",
+              "answerImage": "/game/round-2/batch-1/question-03.jpeg"
+            },
+            {
+              "id": "question-04",
+              "number": 4,
+              "audio": "/game/round-2/batch-1/question-04.mp3",
+              "answerImage": "/game/round-2/batch-1/question-04.jpeg"
+            },
+            {
+              "id": "question-05",
+              "number": 5,
+              "audio": "/game/round-2/batch-1/question-05.mp3",
+              "answerImage": "/game/round-2/batch-1/question-05.jpeg"
+            },
+            {
+              "id": "question-06",
+              "number": 6,
+              "audio": "/game/round-2/batch-1/question-06.mp3",
+              "answerImage": "/game/round-2/batch-1/question-06.jpeg"
+            },
+            {
+              "id": "question-07",
+              "number": 7,
+              "audio": "/game/round-2/batch-1/question-07.mp3",
+              "answerImage": "/game/round-2/batch-1/question-07.jpeg"
+            },
+            {
+              "id": "question-08",
+              "number": 8,
+              "audio": "/game/round-2/batch-1/question-08.mp3",
+              "answerImage": "/game/round-2/batch-1/question-08.jpeg"
+            },
+            {
+              "id": "question-09",
+              "number": 9,
+              "audio": "/game/round-2/batch-1/question-09.mp3",
+              "answerImage": "/game/round-2/batch-1/question-09.jpeg"
+            },
+            {
+              "id": "question-10",
+              "number": 10,
+              "audio": "/game/round-2/batch-1/question-10.mp3",
+              "answerImage": "/game/round-2/batch-1/question-10.jpeg"
+            },
+            {
+              "id": "question-11",
+              "number": 11,
+              "audio": "/game/round-2/batch-1/question-11.mp3",
+              "answerImage": "/game/round-2/batch-1/question-11.jpeg"
+            },
+            {
+              "id": "question-12",
+              "number": 12,
+              "audio": "/game/round-2/batch-1/question-12.mp3",
+              "answerImage": "/game/round-2/batch-1/question-12.jpeg"
+            },
+            {
+              "id": "question-13",
+              "number": 13,
+              "audio": "/game/round-2/batch-1/question-13.mp3",
+              "answerImage": "/game/round-2/batch-1/question-13.jpeg"
+            },
+            {
+              "id": "question-14",
+              "number": 14,
+              "audio": "/game/round-2/batch-1/question-14.mp3",
+              "answerImage": "/game/round-2/batch-1/question-14.png"
+            },
+            {
+              "id": "question-15",
+              "number": 15,
+              "audio": "/game/round-2/batch-1/question-15.mp3",
+              "answerImage": "/game/round-2/batch-1/question-15.jpeg"
+            }
+          ]
         },
         {
           "id": "batch-2",
           "name": "Batch 2",
-          "questions": []
+          "questions": [
+            {
+              "id": "question-01",
+              "number": 1,
+              "audio": "/game/round-2/batch-2/question-01.mp3",
+              "answerImage": "/game/round-2/batch-2/question-01.jpeg"
+            },
+            {
+              "id": "question-02",
+              "number": 2,
+              "audio": "/game/round-2/batch-2/question-02.mp3",
+              "answerImage": "/game/round-2/batch-2/question-02.jpeg"
+            },
+            {
+              "id": "question-03",
+              "number": 3,
+              "audio": "/game/round-2/batch-2/question-03.mp3",
+              "answerImage": "/game/round-2/batch-2/question-03.jpeg"
+            },
+            {
+              "id": "question-04",
+              "number": 4,
+              "audio": "/game/round-2/batch-2/question-04.mp3",
+              "answerImage": "/game/round-2/batch-2/question-04.jpeg"
+            },
+            {
+              "id": "question-05",
+              "number": 5,
+              "audio": "/game/round-2/batch-2/question-05.mp3",
+              "answerImage": "/game/round-2/batch-2/question-05.jpeg"
+            },
+            {
+              "id": "question-06",
+              "number": 6,
+              "audio": "/game/round-2/batch-2/question-06.mp3",
+              "answerImage": "/game/round-2/batch-2/question-06.png"
+            },
+            {
+              "id": "question-07",
+              "number": 7,
+              "audio": "/game/round-2/batch-2/question-07.mp3",
+              "answerImage": "/game/round-2/batch-2/question-07.jpeg"
+            },
+            {
+              "id": "question-08",
+              "number": 8,
+              "audio": "/game/round-2/batch-2/question-08.mp3",
+              "answerImage": "/game/round-2/batch-2/question-08.jpeg"
+            },
+            {
+              "id": "question-09",
+              "number": 9,
+              "audio": "/game/round-2/batch-2/question-09.mp3",
+              "answerImage": "/game/round-2/batch-2/question-09.jpeg"
+            },
+            {
+              "id": "question-10",
+              "number": 10,
+              "audio": "/game/round-2/batch-2/question-10.mp3",
+              "answerImage": "/game/round-2/batch-2/question-10.jpeg"
+            },
+            {
+              "id": "question-11",
+              "number": 11,
+              "audio": "/game/round-2/batch-2/question-11.mp3",
+              "answerImage": "/game/round-2/batch-2/question-11.jpeg"
+            },
+            {
+              "id": "question-12",
+              "number": 12,
+              "audio": "/game/round-2/batch-2/question-12.mp3",
+              "answerImage": "/game/round-2/batch-2/question-12.jpeg"
+            },
+            {
+              "id": "question-13",
+              "number": 13,
+              "audio": "/game/round-2/batch-2/question-13.mp3",
+              "answerImage": "/game/round-2/batch-2/question-13.jpeg"
+            },
+            {
+              "id": "question-14",
+              "number": 14,
+              "audio": "/game/round-2/batch-2/question-14.mp3",
+              "answerImage": "/game/round-2/batch-2/question-14.jpeg"
+            },
+            {
+              "id": "question-15",
+              "number": 15,
+              "audio": "/game/round-2/batch-2/question-15.mp3",
+              "answerImage": "/game/round-2/batch-2/question-15.jpeg"
+            }
+          ]
         }
       ]
     }
