@@ -193,7 +193,7 @@ export const QuestionPlayScreen: React.FC = () => {
 
                 <div>
                   <h3 style={{ fontSize: '2.5rem', fontWeight: 900, letterSpacing: '0.02em', color: '#ffffff' }}>
-                    IDENTIFY THE MOVIE 🤔
+                    GUESS THE SONG 🤔
                   </h3>
                 </div>
 
