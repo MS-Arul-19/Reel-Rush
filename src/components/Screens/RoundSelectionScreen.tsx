@@ -93,11 +93,35 @@ export const RoundSelectionScreen: React.FC = () => {
                   )}
                 </div>
 
-                <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '8px' }}>
+                <h3 style={{ fontSize: '1.65rem', fontWeight: 900, letterSpacing: '0.02em', marginBottom: '10px', color: 'var(--text-primary)' }}>
                   {round.name}
                 </h3>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
-                  {totalQuestions} Audio Questions Total
+                {round.description && (
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', fontWeight: 600, lineHeight: 1.5, marginBottom: '14px' }}>
+                    {round.description}
+                  </p>
+                )}
+                {round.rules && (
+                  <div
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      padding: '5px 12px',
+                      background: 'rgba(247, 201, 72, 0.12)',
+                      border: '1px solid rgba(247, 201, 72, 0.3)',
+                      borderRadius: '8px',
+                      color: 'var(--accent-gold)',
+                      fontSize: '0.8rem',
+                      fontWeight: 700,
+                      letterSpacing: '0.05em',
+                      marginBottom: '14px',
+                    }}
+                  >
+                    {round.rules}
+                  </div>
+                )}
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>
+                  {totalQuestions} Questions Total
                 </p>
               </div>
 

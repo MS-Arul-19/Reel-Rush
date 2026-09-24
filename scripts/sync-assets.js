@@ -24,13 +24,17 @@ function processAssets() {
     rounds: [
       {
         id: "round-1",
-        name: "Round 1",
+        name: "ROUND 1 | DIALOGUE DECODE",
+        description: "IDENTIFY THE TAMIL MOVIE FROM THE GIVEN DIALOGUE.",
+        rules: "FIXED TIME | +2 PER CORRECT ANSWER",
         type: "AUDIO_FIRST",
         batches: []
       },
       {
         id: "round-2",
-        name: "Round 2",
+        name: "ROUND 2 | TUNE HUNT",
+        description: "IDENTIFY THE TAMIL SONG FROM ENGLISH-TRANSLATED LYRICS & SING IT!",
+        rules: "+2 PER CORRECT SONG",
         type: "IMAGE_FIRST",
         batches: []
       }

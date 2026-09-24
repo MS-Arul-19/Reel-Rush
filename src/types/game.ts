@@ -33,7 +33,9 @@ export interface Batch {
 
 export interface Round {
   id: string;          // e.g. "round-1"
-  name: string;        // e.g. "Round 1"
+  name: string;        // e.g. "ROUND 1 | DIALOGUE DECODE"
+  description?: string; // e.g. "IDENTIFY THE TAMIL MOVIE FROM THE GIVEN DIALOGUE."
+  rules?: string;       // e.g. "FIXED TIME | +2 PER CORRECT ANSWER"
   type?: 'AUDIO_FIRST' | 'IMAGE_FIRST';
   batches: Batch[];
 }

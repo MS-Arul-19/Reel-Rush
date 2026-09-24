@@ -30,6 +30,11 @@ export const BatchSelectionScreen: React.FC = () => {
         <h2 style={{ fontSize: '2.4rem', fontWeight: 900, letterSpacing: '0.04em', marginTop: '4px' }}>
           SELECT BATCH
         </h2>
+        {currentRound.description && (
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', marginTop: '8px', maxWidth: '640px', lineHeight: 1.5 }}>
+            {currentRound.description}
+          </p>
+        )}
       </div>
 
       <div
